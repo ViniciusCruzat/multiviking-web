@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MultiViking — Soporte informático y administración TI para empresas en Santiago</title>
+<meta name="description" content="MultiViking administra la tecnología de tu empresa: soporte y mesa de ayuda, redes y Wi-Fi, servidores, respaldo, correo corporativo, ciberseguridad y cámaras. Planes mensuales en UF, sin letra chica.">
+<meta property="og:title" content="MultiViking — Administración tecnológica integral">
+<meta property="og:description" content="Tu departamento de informática, sin tener que contratar uno. Planes mensuales de soporte TI para empresas en Santiago.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --morado:#6D3FE8; --morado-osc:#4C27B8; --morado-claro:#F1ECFE;
+  --tinta:#1B2430; --tinta-2:#52657A; --linea:#E2E8F0; --fondo:#F6F8FB; --blanco:#fff;
+  --noche:#131A29; --verde:#1E9E61;
+  --radio:14px; --ancho:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Montserrat,"Segoe UI",Tahoma,sans-serif;color:var(--tinta);background:var(--blanco);line-height:1.6;font-size:16px}
+img,svg{max-width:100%}
+a{color:var(--morado)}
+.cont{max-width:var(--ancho);margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.15;margin:0;text-wrap:balance}
+h2{font-size:clamp(26px,3.4vw,36px);font-weight:800;letter-spacing:-.4px}
+.sobre{font-size:12px;font-weight:700;letter-spacing:2.6px;text-transform:uppercase;color:var(--morado);margin-bottom:10px}
+.bajada{color:var(--tinta-2);max-width:680px;margin:14px 0 0}
+section{padding:76px 0;scroll-margin-top:66px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 22px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-pri{background:var(--morado);color:#fff}
+.btn-pri:hover{background:var(--morado-osc)}
+.btn-sec{border-color:rgba(255,255,255,.35);color:#fff}
+.btn-sec:hover{border-color:#fff}
+.btn-linea{border-color:var(--morado);color:var(--morado);background:#fff}
+.btn-linea:hover{background:var(--morado-claro)}
+
+/* Cabecera */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea)}
+.barra{display:flex;align-items:center;justify-content:space-between;height:66px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--tinta);font-weight:800;font-size:20px;letter-spacing:-.3px}
+.marca svg{width:34px;height:34px}
+nav{display:flex;align-items:center;gap:26px}
+nav a{text-decoration:none;color:var(--tinta);font-weight:600;font-size:14px}
+nav a:hover{color:var(--morado)}
+nav .btn{padding:10px 16px;font-size:14px;color:#fff}
+@media(max-width:860px){nav a:not(.btn){display:none}}
+
+/* Portada */
+.portada{background:radial-gradient(1100px 500px at 85% -10%,#3a2a8a 0%,transparent 60%),var(--noche);color:#fff;padding:92px 0 84px}
+.portada h1{font-size:clamp(34px,5.4vw,58px);font-weight:800;letter-spacing:-1.2px;max-width:820px}
+.portada h1 em{font-style:normal;color:#B9A3FF}
+.portada p{font-size:clamp(16px,1.6vw,19px);color:#C9D3E3;max-width:640px;margin:22px 0 32px}
+.acciones{display:flex;flex-wrap:wrap;gap:12px}
+.cifras{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:60px;border-top:1px solid rgba(255,255,255,.14);padding-top:30px}
+.cifras b{display:block;font-size:30px;font-weight:800;font-variant-numeric:tabular-nums}
+.cifras span{font-size:13px;color:#A9B6CB}
+@media(max-width:720px){.cifras{grid-template-columns:repeat(2,1fr)}}
+
+/* Servicios */
+.rejilla{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+@media(max-width:920px){.rejilla{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.rejilla{grid-template-columns:1fr}}
+.tarjeta{border:1px solid var(--linea);border-radius:var(--radio);padding:26px;background:#fff}
+.tarjeta .ico{width:44px;height:44px;border-radius:11px;background:var(--morado-claro);display:grid;place-items:center;margin-bottom:16px}
+.tarjeta .ico svg{width:23px;height:23px;stroke:var(--morado);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tarjeta h3{font-size:18px;font-weight:700}
+.tarjeta p{margin:9px 0 0;color:var(--tinta-2);font-size:14.5px}
+.tarjeta ul{margin:12px 0 0;padding:0;list-style:none;font-size:14px;color:var(--tinta)}
+.tarjeta li{padding-left:20px;position:relative;margin-top:5px}
+.tarjeta li::before{content:"";position:absolute;left:2px;top:9px;width:7px;height:7px;border-radius:50%;background:var(--morado)}
+
+/* Cómo trabajamos */
+.gris{background:var(--fondo)}
+.pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px;counter-reset:paso}
+@media(max-width:920px){.pasos{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.pasos{grid-template-columns:1fr}}
+.paso{background:#fff;border-radius:var(--radio);padding:24px;border:1px solid var(--linea);counter-increment:paso}
+.paso::before{content:counter(paso);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--tinta);color:#fff;font-weight:800;font-size:15px;margin-bottom:14px}
+.paso h3{font-size:16.5px;font-weight:700}
+.paso p{margin:8px 0 0;color:var(--tinta-2);font-size:14.5px}
+
+/* Planes */
+.planes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;align-items:stretch}
+@media(max-width:920px){.planes{grid-template-columns:1fr}}
+.plan{border:1px solid var(--linea);border-radius:var(--radio);padding:28px;background:#fff;display:flex;flex-direction:column}
+.plan.destacado{border:2px solid var(--morado);box-shadow:0 18px 40px rgba(109,63,232,.14)}
+.plan .cinta{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;background:var(--morado);color:#fff;padding:4px 10px;border-radius:99px;margin-bottom:12px}
+.plan h3{font-size:21px;font-weight:800}
+.plan .para{color:var(--tinta-2);font-size:14px;margin:6px 0 18px;min-height:44px}
+.precio{font-size:40px;font-weight:800;letter-spacing:-1px;font-variant-numeric:tabular-nums}
+.precio small{font-size:15px;font-weight:600;color:var(--tinta-2);letter-spacing:0}
+.plan .nota{font-size:13px;color:var(--tinta-2);margin:4px 0 18px}
+.plan ul{list-style:none;padding:0;margin:0 0 24px;font-size:14.5px;flex:1}
+.plan li{padding-left:26px;position:relative;margin-top:9px}
+.plan li::before{content:"";position:absolute;left:0;top:4px;width:16px;height:16px;border-radius:50%;background:var(--verde) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.3 2.3 4.7-5' fill='none' stroke='%23fff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+.plan li.no{color:#8493A6}
+.plan li.no::before{background:#CBD5E1}
+.plan .btn{justify-content:center}
+.pie-planes{margin-top:22px;font-size:13.5px;color:var(--tinta-2)}
+
+/* Tabla de adicionales */
+.tabla-env{overflow-x:auto;margin-top:34px;border:1px solid var(--linea);border-radius:var(--radio);background:#fff}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+th,td{text-align:left;padding:13px 18px;border-bottom:1px solid var(--linea)}
+th{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:var(--tinta-2);background:var(--fondo)}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}
+
+/* Por qué */
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+@media(max-width:860px){.dos{grid-template-columns:1fr}}
+.lista-ok{list-style:none;padding:0;margin:26px 0 0}
+.lista-ok li{padding:14px 0 14px 34px;border-bottom:1px solid var(--linea);position:relative}
+.lista-ok li::before{content:"";position:absolute;left:0;top:17px;width:20px;height:20px;border-radius:50%;background:var(--morado-claro) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.8 10.3l2.8 2.8 5.6-6' fill='none' stroke='%236D3FE8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat}
+.lista-ok b{display:block}
+.lista-ok span{color:var(--tinta-2);font-size:14.5px}
+.rubros{background:var(--noche);color:#fff;border-radius:var(--radio);padding:30px}
+.rubros h3{font-size:18px}
+.rubros p{color:#C9D3E3;font-size:14.5px}
+.etiquetas{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.etiquetas span{border:1px solid rgba(255,255,255,.25);border-radius:99px;padding:6px 13px;font-size:13px;font-weight:600}
+
+/* Preguntas */
+details{border-bottom:1px solid var(--linea);padding:18px 0}
+summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;line-height:1;color:var(--morado)}
+details[open] summary::after{content:"–"}
+details p{margin:10px 0 0;color:var(--tinta-2);max-width:760px}
+
+/* Contacto */
+.contacto{background:linear-gradient(135deg,var(--morado) 0%,var(--morado-osc) 100%);color:#fff;text-align:center}
+.contacto h2{color:#fff}
+.contacto p{color:#E5DCFF;max-width:600px;margin:14px auto 30px}
+.contacto .acciones{justify-content:center}
+.contacto .btn-pri{background:#fff;color:var(--morado-osc)}
+.contacto .btn-pri:hover{background:var(--morado-claro)}
+.datos{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 30px;margin-top:30px;font-weight:600;font-size:15px}
+.datos a{color:#fff;text-decoration:none}
+.datos a:hover{text-decoration:underline}
+footer{background:var(--noche);color:#A9B6CB;font-size:13.5px;padding:28px 0}
+footer .cont{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+footer a{color:#C9D3E3}
+:focus-visible{outline:3px solid #B9A3FF;outline-offset:2px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="cont barra">
+    <a class="marca" href="#inicio" aria-label="MultiViking, inicio">
+      <svg viewBox="0 0 575 548" aria-hidden="true"><g fill="#6D3FE8"><path d="M8 18C60 70 110 85 152 88c-2 37-27 72-57 97C50 150 20 90 8 18Z"/><path d="M567 18C515 70 465 85 423 88c2 37 27 72 57 97 45-35 75-95 87-167Z"/><path d="M100 212c50-22 72-72 75-124 65-33 160-33 225 0 3 52 25 102 75 124Z"/><path fill-rule="evenodd" d="M105 238h365L365 545H212ZM228 240h122l-61 215Z"/></g></svg>
+      MultiViking
+    </a>
+    <nav aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#metodo">Cómo trabajamos</a>
+      <a href="#planes">Planes y precios</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="btn btn-pri" href="#contacto">Pedir diagnóstico</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+
+<section class="portada">
+  <div class="cont">
+    <div class="sobre" style="color:#B9A3FF">Administración tecnológica integral · Santiago de Chile</div>
+    <h1>Tu departamento de informática, <em>sin tener que contratar uno.</em></h1>
+    <p>Nos hacemos cargo de los computadores, la red, el correo, los respaldos y la seguridad de tu empresa por una cuota mensual fija en UF. Tú trabajas; nosotros vigilamos que todo funcione.</p>
+    <div class="acciones">
+      <a class="btn btn-pri" href="#contacto">Pedir diagnóstico sin costo</a>
+      <a class="btn btn-sec" href="#planes">Ver planes y precios</a>
+    </div>
+    <div class="cifras">
+      <div><b>240+</b><span>computadores de empresas en nuestro inventario</span></div>
+      <div><b>230+</b><span>casillas de correo administradas</span></div>
+      <div><b>15</b><span>oficinas y sucursales conectadas</span></div>
+      <div><b>690+</b><span>solicitudes atendidas en los últimos 12 meses</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="cont">
+    <div class="sobre">Servicios</div>
+    <h2>Todo lo que tu empresa necesita para que la tecnología no sea un problema</h2>
+    <p class="bajada">Un solo proveedor para el día a día y para los proyectos. Sin derivarte entre tres empresas distintas cuando algo falla.</p>
+
+    <div class="rejilla">
+      <article class="tarjeta">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+        <h3>Soporte y mesa de ayuda</h3>
+        <p>Tus usuarios piden ayuda por WhatsApp, correo o portal y cada solicitud queda registrada con su seguimiento.</p>
+        <ul><li>Asistencia remota inmediata</li><li>Visitas en terreno</li><li>Monitoreo y mantención preventiva</li></ul>
+      </article>
+      <article class="tarjeta">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1"/><path d="M2 9a14 14 0 0 1 20 0"/></svg></div>
+        <h3>Redes, Wi-Fi y cableado</h3>
+        <p>Internet estable en toda la oficina y en cada sucursal, con equipos profesionales administrados a distancia.</p>
+        <ul><li>Wi-Fi empresarial y red de invitados</li><li>Doble enlace de internet y VPN</li><li>Cableado estructurado y racks</li></ul>
+      </article>
+      <article class="tarjeta">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="7" rx="1.5"/><rect x="4" y="14" width="16" height="7" rx="1.5"/><path d="M8 6.5h.01M8 17.5h.01M12 10v4"/></svg></div>
+        <h3>Servidores, NAS y respaldo</h3>
+        <p>Tus archivos ordenados por área, con permisos por persona y copias que se prueban, no que se suponen.</p>
+        <ul><li>Carpetas compartidas y permisos</li><li>Respaldo local y en la nube</li><li>Virtualización de servidores</li></ul>
+      </article>
+      <article class="tarjeta">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7.5l8.5 6 8.5-6"/></svg></div>
+        <h3>Correo y herramientas en la nube</h3>
+        <p>Administramos Microsoft 365 y Google Workspace: altas, bajas, licencias y que el correo llegue a destino.</p>
+        <ul><li>Creación y baja de cuentas</li><li>Migraciones de correo sin pérdida</li><li>Protección contra suplantación (SPF, DKIM, DMARC)</li></ul>
+      </article>
+      <article class="tarjeta">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.500-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.500L15.500 9.500"/></svg></div>
+        <h3>Ciberseguridad</h3>
+        <p>Cerramos las puertas por donde entran los ataques más comunes a las pymes: claves débiles, correo y equipos sin parches.</p>
+        <ul><li>Doble factor de autenticación</li><li>Antivirus y parches al día</li><li>Respuesta ante cuentas comprometidas</li></ul>
+      </article>
+      <article class="tarjeta">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 8l12-3 2 6-12 3z"/><path d="M17 9l4 1-1 3-3-1M7 13.500V19h5"/></svg></div>
+        <h3>Cámaras y control de acceso</h3>
+        <p>Sistemas de videovigilancia que se pueden ver desde el celular, instalados y configurados de forma segura.</p>
+        <ul><li>Cámaras IP y grabadores</li><li>Acceso remoto seguro</li><li>Control de acceso y reloj control</li></ul>
+      </article>
+      <article class="tarjeta">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="18" cy="17" r="2"/></svg></div>
+        <h3>Proyectos y migraciones</h3>
+        <p>Cambios de oficina, renovación de equipos, paso a la nube o un servidor nuevo, con plan y fecha de entrega.</p>
+        <ul><li>Habilitación de oficinas y sucursales</li><li>Renovación de computadores</li><li>Inventario y documentación</li></ul>
+      </article>
+      <article class="tarjeta">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.500 3 14.500 0 18M12 3c-3 3.500-3 14.500 0 18"/></svg></div>
+        <h3>Dominios, hosting y sitio web</h3>
+        <p>Tu dominio, tu sitio y tu correo en un solo lugar, renovados a tiempo y a nombre de tu empresa.</p>
+        <ul><li>Dominios .cl y .com</li><li>Hosting y certificados</li><li>DNS y protección con Cloudflare</li></ul>
+      </article>
+      <article class="tarjeta">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9H3z"/><path d="M9.500 20v-6h5v6"/></svg></div>
+        <h3>Domótica y automatización</h3>
+        <p>Casas y oficinas inteligentes: iluminación, clima, cortinas, energía solar y seguridad en una sola aplicación.</p>
+        <ul><li>Automatización de luces y clima</li><li>Monitoreo de energía</li><li>Integración de cámaras y alarmas</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="metodo" class="gris">
+  <div class="cont">
+    <div class="sobre">Cómo trabajamos</div>
+    <h2>Prevenir cuesta menos que reparar</h2>
+    <p class="bajada">El soporte tradicional llega cuando ya se cayó algo. Nosotros instalamos un agente de monitoreo en cada equipo y nos enteramos antes que tú.</p>
+    <div class="pasos">
+      <div class="paso"><h3>Diagnóstico sin costo</h3><p>Visitamos tu oficina, levantamos el inventario y te entregamos un informe con lo urgente, lo importante y lo que puede esperar.</p></div>
+      <div class="paso"><h3>Puesta en orden</h3><p>Instalamos monitoreo en cada equipo, ordenamos claves y accesos, y dejamos los respaldos funcionando y probados.</p></div>
+      <div class="paso"><h3>Operación diaria</h3><p>Tus usuarios piden ayuda por el canal que prefieran. Resolvemos en remoto y vamos a terreno cuando hace falta.</p></div>
+      <div class="paso"><h3>Informe mensual</h3><p>Cada mes sabes qué se atendió, cómo están tus equipos y qué conviene renovar, para decidir con datos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="planes">
+  <div class="cont">
+    <div class="sobre">Planes y precios</div>
+    <h2>Cuota mensual fija, en UF y sin letra chica</h2>
+    <p class="bajada">El precio depende de cuántos equipos administramos y de cuánto quieres delegar. Valores más IVA, con contrato a 12 meses.</p>
+
+    <div class="planes">
+      <div class="plan">
+        <h3>Remoto</h3>
+        <p class="para">Para oficinas chicas que quieren a quién llamar y que alguien vigile sus equipos.</p>
+        <div class="precio">2,5 UF <small>/ mes</small></div>
+        <p class="nota">Hasta 4 equipos · equipo adicional 0,55 UF</p>
+        <ul>
+          <li>Mesa de ayuda remota en horario hábil</li>
+          <li>Monitoreo de cada equipo</li>
+          <li>Actualizaciones y parches de Windows</li>
+          <li>Inventario de equipos y programas</li>
+          <li>Respuesta el mismo día hábil</li>
+          <li class="no">Visitas en terreno con tarifa preferente</li>
+        </ul>
+        <a class="btn btn-linea" href="#contacto">Consultar</a>
+      </div>
+      <div class="plan destacado">
+        <span class="cinta">Recomendado</span>
+        <h3>Empresa</h3>
+        <p class="para">Soporte completo para el día a día, con visitas programadas e informe mensual.</p>
+        <div class="precio">3,7 UF <small>/ mes</small></div>
+        <p class="nota">Hasta 4 equipos · equipo adicional 0,85 UF</p>
+        <ul>
+          <li>Todo lo del plan Remoto</li>
+          <li>Soporte remoto sin tope de solicitudes</li>
+          <li>Visita preventiva cada dos meses; mensual desde 6 equipos</li>
+          <li>Antivirus administrado y revisado</li>
+          <li>Altas y bajas de correo (Microsoft 365 o Google)</li>
+          <li>Administración del router y el Wi-Fi de la oficina</li>
+          <li>Urgencias: respuesta en 1 hora hábil</li>
+          <li>Informe mensual</li>
+        </ul>
+        <a class="btn btn-pri" href="#contacto">Pedir diagnóstico</a>
+      </div>
+      <div class="plan">
+        <h3>Integral</h3>
+        <p class="para">Delegas toda la tecnología: equipos, red, respaldos y proveedores.</p>
+        <div class="precio">9 UF <small>/ mes</small></div>
+        <p class="nota">Hasta 6 equipos · equipo adicional 1,2 UF</p>
+        <ul>
+          <li>Todo lo del plan Empresa</li>
+          <li>4 horas de terreno incluidas al mes</li>
+          <li>Respaldo supervisado y prueba de restauración trimestral</li>
+          <li>Coordinación con tus proveedores de internet, telefonía y sistemas</li>
+          <li>Doble factor y vigilancia contra suplantación de correo</li>
+          <li>Urgencias: respuesta en 30 minutos hábiles</li>
+          <li>Reunión trimestral de planificación</li>
+        </ul>
+        <a class="btn btn-linea" href="#contacto">Consultar</a>
+      </div>
+    </div>
+    <p class="pie-planes">Valores netos, más IVA. Horario hábil: lunes a viernes de 9:00 a 18:00. «Equipo» es cada computador de escritorio o notebook. Las impresoras, celulares y el Wi-Fi de la oficina no pagan como equipo. Desde 21 equipos el valor por equipo adicional baja por tramo. Puesta en marcha sin costo con contrato a 12 meses.</p>
+
+    <div class="tabla-env">
+      <table>
+        <thead><tr><th>Adicionales y servicios por evento</th><th class="num">Valor neto</th></tr></thead>
+        <tbody>
+          <tr><td>Servidor administrado (físico o virtual)</td><td class="num">2,0 UF / mes</td></tr>
+          <tr><td>NAS administrado: permisos, respaldo y actualizaciones</td><td class="num">1,0 UF / mes</td></tr>
+          <tr><td>Sucursal adicional con su red administrada</td><td class="num">1,0 UF / mes</td></tr>
+          <tr><td>Grabador de cámaras administrado y con acceso remoto seguro</td><td class="num">0,5 UF / mes</td></tr>
+          <tr><td>Hora de terreno para clientes con plan</td><td class="num">1,0 UF</td></tr>
+          <tr><td>Visita sin contrato, hasta 2 horas, traslado incluido en Santiago</td><td class="num">2,5 UF</td></tr>
+          <tr><td>Hora de soporte remoto sin contrato</td><td class="num">1,0 UF</td></tr>
+          <tr><td>Redes, cableado, cámaras, migraciones y renovación de equipos</td><td class="num">Cotización cerrada</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="gris">
+  <div class="cont dos">
+    <div>
+      <div class="sobre">Por qué MultiViking</div>
+      <h2>Trato directo, respuesta rápida y todo documentado</h2>
+      <ul class="lista-ok">
+        <li><b>Un solo responsable</b><span>Computadores, red, correo, cámaras y proveedores de internet: nos llamas a nosotros y nosotros coordinamos.</span></li>
+        <li><b>Conocemos los programas de tu rubro</b><span>Damos soporte a diario a oficinas que trabajan con AutoCAD, Softland, Laudus, Presto y sistemas de venta en sucursales.</span></li>
+        <li><b>Todo queda por escrito</b><span>Cada solicitud tiene su ticket y cada equipo su ficha. Tu información no depende de la memoria de una persona.</span></li>
+        <li><b>Tus claves son tuyas</b><span>Las cuentas de administrador quedan a nombre de tu empresa y te entregamos el inventario de accesos.</span></li>
+        <li><b>Precio conocido de antemano</b><span>Cuota fija mensual. Lo que queda fuera del plan se cotiza antes de hacerlo, nunca después.</span></li>
+      </ul>
+    </div>
+    <div class="rubros">
+      <h3>Experiencia en empresas como la tuya</h3>
+      <p>Administramos oficinas desde 6 hasta más de 100 computadores, con una o hasta 8 sucursales, en rubros donde detenerse no es opción.</p>
+      <div class="etiquetas">
+        <span>Ingeniería y construcción</span><span>Transporte de pasajeros</span><span>Industria</span><span>Comercio</span><span>Servicios profesionales</span><span>Oficinas con sucursales</span>
+      </div>
+      <p style="margin-top:22px">Trabajamos con las plataformas que ya usas:</p>
+      <div class="etiquetas">
+        <span>Microsoft 365</span><span>Google Workspace</span><span>UniFi</span><span>QNAP</span><span>VMware</span><span>Cloudflare</span><span>Hikvision</span><span>Dahua</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="preguntas">
+  <div class="cont">
+    <div class="sobre">Preguntas frecuentes</div>
+    <h2>Lo que nos preguntan antes de contratar</h2>
+    <div style="margin-top:26px">
+      <details open><summary>¿Qué cuenta como «equipo»?</summary><p>Cada computador de escritorio o notebook que usa una persona de tu empresa. Los servidores, NAS y grabadores de cámaras se administran como adicional porque exigen otro tipo de trabajo.</p></details>
+      <details><summary>¿Qué pasa si necesito una visita y mi plan no la incluye?</summary><p>Se cobra por hora con la tarifa preferente de cliente con plan, y siempre te avisamos el costo antes de ir. La mayoría de los problemas se resuelve en remoto en minutos.</p></details>
+      <details><summary>¿Por qué el precio está en UF?</summary><p>Para que la cuota mantenga su valor sin renegociar cada año. Se factura en pesos con la UF del día de emisión.</p></details>
+      <details><summary>¿Hay permanencia?</summary><p>El contrato es a 12 meses y se renueva automáticamente. Puedes terminarlo con 30 días de aviso; en ese caso te entregamos el inventario, las claves y la documentación de tu empresa.</p></details>
+      <details><summary>¿Las licencias y los repuestos están incluidos?</summary><p>No. Las licencias (Microsoft 365, Google Workspace, antivirus de pago) y el hardware se cotizan aparte y quedan a nombre de tu empresa. El plan cubre el trabajo de administrarlos.</p></details>
+      <details><summary>¿Atienden fuera de horario?</summary><p>Sí, para urgencias. Fuera del horario hábil la hora tiene un recargo de 50 %, y lo confirmamos contigo antes de empezar.</p></details>
+      <details><summary>¿Trabajan con empresas fuera de Santiago?</summary><p>El soporte remoto funciona en todo Chile. Las visitas en terreno fuera de Santiago se coordinan y cotizan caso a caso.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contacto">
+  <div class="cont">
+    <h2>Partamos por un diagnóstico sin costo</h2>
+    <p>Cuéntanos cuántos equipos tienes y qué te está dando problemas. En una visita te decimos qué plan te sirve y cuánto cuesta.</p>
+    <div class="acciones">
+      <a class="btn btn-pri" href="https://wa.me/56992995935?text=Hola%2C%20quiero%20un%20diagn%C3%B3stico%20para%20mi%20empresa" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      <a class="btn btn-sec" href="mailto:viniciuscruzat@mvk.cl?subject=Diagn%C3%B3stico%20para%20mi%20empresa">Enviar un correo</a>
+    </div>
+    <div class="datos">
+      <a href="tel:+56992995935">+56 9 9299 5935</a>
+      <a href="mailto:viniciuscruzat@mvk.cl">viniciuscruzat@mvk.cl</a>
+      <span>Santiago, Chile</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="cont">
+    <span>© 2026 MultiServicios Viking SpA · MultiViking</span>
+    <span>Clientes: <a href="https://soporte.mvk.cl" rel="noopener">portal de soporte</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
